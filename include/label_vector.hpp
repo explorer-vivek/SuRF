@@ -1,7 +1,11 @@
 #ifndef LABELVECTOR_H_
 #define LABELVECTOR_H_
 
+#ifdef __x86_64__
 #include <emmintrin.h>
+#else
+#include <sse2neon.h>
+#endif
 
 #include <vector>
 
